@@ -47,7 +47,7 @@ public class EmpresaDAO {
 	
 	}
 	
-	public Empresa consultaEmpresa(String cnpj) {
+	public static Empresa consultaEmpresa(String cnpj) {
 		Empresa empresa = null;
 		java.sql.PreparedStatement ps;
 		try (Connection conn = new FabricaDeConexoes().getConnection()) {
