@@ -26,7 +26,11 @@ public class Convenio {
 	}
 
 	public void setCNPJ(String cnpj) {
-		this.cnpj = cnpj;
+		if (cnpj.length()==14){
+			this.cnpj = cnpj;
+			}
+			else
+			throw new IllegalArgumentException("CNPJ inválido!");
 	}
 
 	public DateTime getDataInicio() {
